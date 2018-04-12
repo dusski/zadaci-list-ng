@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<!-- Toolbar -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="toolbar">
+    <span>Lista zadataka</span>
+    <span class="example-spacer"></span>
+    <mat-chip-list>
+      <mat-chip color="warn" selected="true">number of not completed</mat-chip>
+      <mat-chip color="accent" selected="true">number of completed</mat-chip>
+    </mat-chip-list>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- Toolbar End -->
+
+<!-- List Zadaci -->
+<mat-list role="list" class="zadaci-list">
+  <mat-list-item *ngFor="let zadatak of zadaci" class="zadatak" role="listitem">
+      <h4 mat-line>{{ zadatak.title }}</h4>
+      <span mat-line>{{ zadatak.description }}</span>
+    <mat-checkbox></mat-checkbox>
+  </mat-list-item>
+</mat-list>
+<!-- List Zadaci End -->
