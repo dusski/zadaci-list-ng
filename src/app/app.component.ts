@@ -11,9 +11,10 @@ export class AppComponent {
   zadaci: IZadatak[];
 
   constructor(public _zadatakService: ZadatakService, ) {
-
-
-    this.zadaci = _zadatakService.zadaci$;
-
+    this.zadaci = _zadatakService.getZadaci();
   }
+
+  
+
+
 }

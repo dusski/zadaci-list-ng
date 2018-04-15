@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
+<div class="content">
 <!-- Toolbar -->
 <mat-toolbar color="primary">
   <mat-toolbar-row class="toolbar">
@@ -16,9 +16,19 @@
 <!-- List Zadaci -->
 <mat-list role="list" class="zadaci-list">
   <mat-list-item *ngFor="let zadatak of zadaci" class="zadatak" role="listitem">
-      <h4 mat-line>{{ zadatak.title }}</h4>
-      <span mat-line>{{ zadatak.description }}</span>
+    <h4 mat-line>{{ zadatak.title }}</h4>
+    <span mat-line>{{ zadatak.description }}</span>
     <mat-checkbox></mat-checkbox>
   </mat-list-item>
 </mat-list>
 <!-- List Zadaci End -->
+<!-- New Zadatak Input -->
+<mat-toolbar class="pin-bottom">
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Novi zadatak" value="">
+    </mat-form-field>
+  </form>
+</mat-toolbar>
+<!-- New Zadatak Input End -->
+</div>

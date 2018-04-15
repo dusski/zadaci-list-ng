@@ -7,17 +7,23 @@ import { MatChipsModule } from "@angular/material/chips";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatInputModule } from "@angular/material/input";
+
+const ngModules = [
+  MatToolbarModule,
+  MatChipsModule,
+  MatIconModule,
+  MatListModule,
+  MatCheckboxModule,
+  MatInputModule
+];
 
 @NgModule({
   imports: [
     // CommonModule
-    MatToolbarModule,
-    MatChipsModule,
-    MatIconModule,
-    MatListModule,
-    MatCheckboxModule
+    ngModules
   ],
-  exports: [MatToolbarModule, MatChipsModule, MatIconModule, MatListModule, MatCheckboxModule],
+  exports: [ngModules],
   declarations: []
 })
 export class NgMaterialModule {}
